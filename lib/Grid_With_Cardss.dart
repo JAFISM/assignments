@@ -10,7 +10,7 @@ void main() {
 
 class Grid_with_Cards extends StatelessWidget {
   var colors=[
-    Colors.greenAccent,
+    Colors.tealAccent.shade400,
     Colors.lightBlueAccent,
     Colors.cyanAccent,
     Colors.blueGrey,
@@ -30,7 +30,7 @@ class Grid_with_Cards extends StatelessWidget {
     Icons.table_chart,
     Icons.message_outlined,
     Icons.access_alarm,
-    Icons.home,
+    Icons.video_library_sharp,
     Icons.phone,
     Icons.search,
     Icons.table_chart,
@@ -41,19 +41,29 @@ class Grid_with_Cards extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black54,
         body: GridView.count(
             crossAxisCount: 2,
-            mainAxisSpacing: 10,
-            crossAxisSpacing: 10,
+            mainAxisSpacing: 3,
+            crossAxisSpacing: 3,
             children: List.generate(12, (index){
-              return Card(
-                color: colors[index],
-                child: Row
-                  (
-                  children: [
-                    Icon(icons[index],size: 50,),
-                    Text(("Heart Shaker")),
-                  ],
+              return SizedBox(
+                height: 200,
+                width: 300,
+                child: Card(
+                  color: colors[index],
+                  semanticContainer: true,
+                  child: Row
+                    (
+                    children: [
+                      Icon(icons[index],size: 50,color: Colors.grey.shade900,),
+                      Text(("Heart Shaker"),style: TextStyle(fontSize: 20,fontWeight: FontWeight.bold),),
+                    ],
+                  ),
+                  shape:RoundedRectangleBorder(borderRadius: BorderRadius.circular(10)),
+                  elevation: 12,
+                  margin: EdgeInsets.all(10),
+                  shadowColor: Colors.lightBlueAccent,
                 ),
               );
             }),

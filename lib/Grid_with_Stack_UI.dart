@@ -34,17 +34,20 @@ class Grid_With_Stack extends StatelessWidget {
                 SizedBox(
                   height: 150,
                   width: 920,
-                    child: Card(
-                      semanticContainer: true,
-                        child: Image(
-                      image: NetworkImage(images[index]),
-                      fit: BoxFit.fitWidth,
-                    ),
-                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(12),
+                    child: Image.network(
+                      images[index],
+                      height: 900,
+                      width: 400,
+                      fit: BoxFit.fill,
                     ),
                   ),
+                  //shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+                ),
                 Positioned(
-                  top: 90,
+                  top: 110,
                   left: 5,
                   child: Text(
                     places[index],
