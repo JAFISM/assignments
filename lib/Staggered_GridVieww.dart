@@ -28,8 +28,8 @@ class CardUi extends StatelessWidget {
       Tile(
           url:
              'https://images.pexels.com/photos/5702958/pexels-photo-5702958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-          title: 'Wallpaper',
-          subtitle: 'Wallpaper'),
+          title: 'Crib',
+          subtitle: 'vybbb!'),
       Tile(
           url:
               'https://images.pexels.com/photos/14686142/pexels-photo-14686142.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
@@ -38,17 +38,17 @@ class CardUi extends StatelessWidget {
       Tile(
           url:
               'https://images.pexels.com/photos/13334106/pexels-photo-13334106.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-          title: 'Wallpaper',
-          subtitle: 'Wallpaper'),
+          title: 'Merry or scary?',
+          subtitle: 'Snow bomb'),
       Tile(
           url:"https://images.pexels.com/photos/3334355/pexels-photo-3334355.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          title: 'Wallpaper',
-          subtitle: 'Wallpaper'),
+          title: 'New Year Eve!!',
+          subtitle: '1-jan-2023'),
       Tile(
           url:
               "https://images.pexels.com/photos/6211902/pexels-photo-6211902.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-          title: 'Wallpaper',
-          subtitle: 'Wallpaper')
+          title: 'Happy X-mas',
+          subtitle: 'Christmas Eve!')
     ];
 
     return Scaffold(
