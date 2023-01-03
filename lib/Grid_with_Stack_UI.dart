@@ -28,7 +28,7 @@ class Grid_With_Stack extends StatelessWidget {
             const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
         itemBuilder: (context, index) {
           return Padding(
-            padding: EdgeInsets.only(left: 10, right: 10, top: 15),
+            padding: EdgeInsets.only(left: 10, right: 10, top: 10),
             child: Stack(
               children: [
                 SizedBox(
@@ -36,7 +36,7 @@ class Grid_With_Stack extends StatelessWidget {
                   width: 920,
 
                   child: ClipRRect(
-                    borderRadius: BorderRadius.circular(12),
+                    borderRadius: BorderRadius.circular(20),
                     child: Image.network(
                       images[index],
                       height: 900,
