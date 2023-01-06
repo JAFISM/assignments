@@ -29,7 +29,7 @@ class CardUi extends StatelessWidget {
           url:
              'https://images.pexels.com/photos/5702958/pexels-photo-5702958.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
           title: 'Crib',
-          subtitle: 'vybbb!'),
+          subtitle: 'vybee!'),
       Tile(
           url:
               'https://images.pexels.com/photos/14686142/pexels-photo-14686142.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
