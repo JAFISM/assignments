@@ -112,7 +112,7 @@ class Profile_ui extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: MediaQuery.of(context).size.height*.35,
+              height: MediaQuery.of(context).size.height*.40,
               child: ListView.builder(itemBuilder: (BuildContext context, index) {
                 return Padding(
                   padding: const EdgeInsets.only(left: 30,right: 30,top: 10,bottom: 10),
