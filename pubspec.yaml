@@ -37,6 +37,11 @@ dependencies:
   carousel_slider:
   google_fonts:
   lottie:
+  expandable:
+  expansion_tile_card:
+  animate_icons: ^2.0.0
+  flutter_staggered_animations: ^1.1.1
+  animated_icon_button: ^1.0.2
 
 
 
