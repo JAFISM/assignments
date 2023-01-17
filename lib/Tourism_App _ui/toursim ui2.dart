@@ -1,102 +1,89 @@
-import 'package:carousel_slider/carousel_options.dart';
-import 'package:carousel_slider/carousel_slider.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:carousel_slider/carousel_slider.dart';
+import 'data.dart';
 
 
-class home2 extends StatefulWidget {  @override
-State<home2> createState() => _home2State();
-}
-
-class _home2State extends State<home2> {
+class Travpage extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
+    //fetch the id from the prvious page
+    final travdataid = ModalRoute.of(context)?.settings.arguments;
+    //check the id found in the given list if found fetch all the value corresponding to that id
+    final travdata = traveldatas.firstWhere((data) => data["id"]== travdataid);
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Place Details'),
+
+      ),
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Container(
-              width: double.infinity,
-              height: 300,
-              child: Image(image: NetworkImage("https://images.unsplash.com/photo-1499856871958-5b9627545d1a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=820&q=80",),fit: BoxFit.cover,),
-            ),
-            Container(
-              width: double.infinity,
-              height: 300,
+            Image(image:NetworkImage("${travdata["images"]}") ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
               child: ListTile(
-                title: Text("ITALY",style: TextStyle(fontSize: 30,fontWeight: FontWeight.w600),),
-                subtitle: Text("Italy was the native place of many civilizations such as the Italic peoples and the Etruscans, while due to its central geographic location in Southern Europe and the Mediterranean, the country has also historically been home to myriad peoples and cultures, who immigrated to the peninsula throughout history.[22][23] The Latins, native of central Italy, formed the Roman Kingdom in the 8th century BC, which eventually became a republic with a government of the Senate and the People. ",style: TextStyle(fontSize: 18),),
+                title: Text("${travdata["place"]}"),
+                subtitle: Padding(
+                  padding: const EdgeInsets.only(top:8),
+                  child: Text("${travdata["description"]}"),
+                ),
               ),
             ),
-
-            Container(
-              child: Column(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(top: 50,right: 250),
-                    child: Text("Places To Visit",style: TextStyle(fontSize: 20,fontWeight: FontWeight.w600,color: Colors.black),),
-                  ),
-                  CarouselSlider(
-                      items: [
-                        SizedBox(
-                          height: 130,
-                          width: 370,
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(30),
-                            child: Card(
-                              child: Image(
-                                image: NetworkImage(
-                                    "https://images.unsplash.com/photo-1673794784636-2e69436d3eee?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1856&q=80"),
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                          ),
-                        ),
-                        SizedBox(
-                          height: 130,
-                          width: 370,
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(30),
-                            child: Card(
-                              child: Image(
-                                image: NetworkImage(
-                                    "https://images.unsplash.com/photo-1673641688165-6f428e12c51b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"),
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                          ),
-                        ),
-                        SizedBox(
-                          height: 130,
-                          width: 370,
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(30),
-                            child: Card(
-                              child: Image(
-                                image: NetworkImage(
-                                    "https://images.unsplash.com/photo-1528360983277-13d401cdc186?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"),
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                      options: CarouselOptions(
-                        autoPlay: true,
-                        viewportFraction: .5,
-                        height: 200,
-                        enlargeCenterPage: true,
-                        aspectRatio: 16 / 9,
-                        autoPlayCurve: Curves.easeInToLinear,
-                        autoPlayAnimationDuration: Duration(
-                            milliseconds: 600),
-                        enableInfiniteScroll: true,
-                      )),
-                ],
+            Padding(
+              padding: const EdgeInsets.all(10.0),
+              child: ListTile(
+                leading: Text("places to visit",style: TextStyle(fontSize: 20,fontWeight: FontWeight.w400),),
               ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(top: 10,bottom: 10),
+              child: CarouselSlider(
+                  items:  [
+                    Container(
+                      decoration: BoxDecoration(borderRadius: BorderRadius.circular(10),
+                        image: DecorationImage(
+                          fit: BoxFit.cover,
+                          image: NetworkImage(
+                            "https://cdn.pixabay.com/photo/2017/01/14/13/59/castelmezzano-1979546__480.jpghttps://cdn.pixabay.com/photo/2017/01/14/13/59/castelmezzano-1979546__480.jpg",
+                          ),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      decoration: BoxDecoration(borderRadius: BorderRadius.circular(10),
+                        image: DecorationImage(
+                          fit: BoxFit.cover,
+                          image: NetworkImage(
+                            "https://cdn.pixabay.com/photo/2017/04/27/05/09/tree-2264494_1280.jpg",
+                          ),
+                        ),
+                      ),
+                    ),
+                    Container(
+                      decoration: BoxDecoration(borderRadius: BorderRadius.circular(10),
+                        image: DecorationImage(
+                          fit: BoxFit.cover,
+                          image: NetworkImage(
+                            "https://cdn.pixabay.com/photo/2016/11/14/03/29/grand-palace-1822487_1280.jpg",
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                  options: CarouselOptions(
+                    viewportFraction: 0.6,
+                    enlargeCenterPage: true,
+                    autoPlay: true,
+                    aspectRatio: 4/1.5,
+                    autoPlayCurve:Curves.easeInOutCubicEmphasized,
+                    autoPlayAnimationDuration:const Duration(milliseconds: 800) ,
+                    enableInfiniteScroll: true,
+                  )),
             ),
           ],
         ),
       ),
     );
-  }}
+  }
+
+}
