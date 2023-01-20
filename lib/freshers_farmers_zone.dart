@@ -6,7 +6,7 @@ void main() {
   runApp(MaterialApp(
     home: Freshers_farm_zone(),
     debugShowCheckedModeBanner: false,
-    theme: ThemeData(primarySwatch: Colors.green),
+    //theme: ThemeData(primarySwatch: Colors.green),
   ));
 }
 
@@ -302,7 +302,11 @@ class Veg_card_grids extends StatelessWidget {
     "https://images.pexels.com/photos/5945954/pexels-photo-5945954.jpeg?auto=compress&cs=tinysrgb&w=600",
     "https://images.pexels.com/photos/7195248/pexels-photo-7195248.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
     "https://images.pexels.com/photos/10819662/pexels-photo-10819662.jpeg?auto=compress&cs=tinysrgb&w=600",
-    "https://images.pexels.com/photos/4443497/pexels-photo-4443497.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    "https://images.pexels.com/photos/4443487/pexels-photo-4443487.jpeg?auto=compress&cs=tinysrgb&w=600"
+    "https://images.pexels.com/photos/4443482/pexels-photo-4443482.jpeg?auto=compress&cs=tinysrgb&w=600"
+   //"https://images.pexels.com/photos/5945669/pexels-photo-5945669.jpeg?auto=compress&cs=tinysrgb&w=600"
+    //"https://images.pexels.com/photos/4443497/pexels-photo-4443497.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load",
+    //"https://images.pexels.com/photos/3651044/pexels-photo-3651044.jpeg?auto=compress&cs=tinysrgb&w=600"
   ];
   List<String> names = [
     "vegetables",
@@ -315,6 +319,9 @@ class Veg_card_grids extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // MediaQueryData queryData = MediaQuery.of(context);
+    // double screenWidth = queryData.size.width;
+    // double cardWidth = screenWidth * 0.8;
     return GridView.builder(
         physics: NeverScrollableScrollPhysics(),
         shrinkWrap: true,
@@ -332,11 +339,11 @@ class Veg_card_grids extends StatelessWidget {
                       topLeft: Radius.circular(25),
                       topRight: Radius.circular(25),
                   ),
-                  child: SizedBox(
-                    height: 280,
-                    width: 200,
+                  // child: Container(
+                  //   width: cardWidth,
+                  //   height: cardWidth * 0.7,
                     child: Card(
-                      borderOnForeground: true,
+                      //borderOnForeground: true,
                       shadowColor: Colors.blueGrey,
                       elevation: 8,
                       child: Column(
@@ -360,7 +367,7 @@ class Veg_card_grids extends StatelessWidget {
                         ],
                       ),
                     ),
-                  ),
+                  //),
                 ),
                 // SizedBox(
                 //   height: 8,

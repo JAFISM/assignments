@@ -34,7 +34,6 @@ class Grid_With_Stack extends StatelessWidget {
                 SizedBox(
                   height: 150,
                   width: 920,
-
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(20),
                     child: Image.network(

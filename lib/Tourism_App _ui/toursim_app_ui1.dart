@@ -26,10 +26,8 @@ class FirstScreen extends StatelessWidget{
                 child: Text("Popular",style:TextStyle(fontSize: 25),),
               ),
               Column(
-                  children:
-                  traveldatas.map((travdata) => GestureDetector(onTap: ()=>gotonext(context,travdata["id"]), child:
-
-                  Padding(
+                  children: traveldatas.map((travdata) => GestureDetector(onTap: ()=>gotonext(context,travdata["id"]),
+                    child: Padding(
                     padding: const EdgeInsets.only(top: 10),
                     child: Container(
                       height: 120,
