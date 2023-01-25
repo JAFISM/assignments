@@ -18,7 +18,12 @@ class Secondpage extends StatelessWidget {
             gradient: LinearGradient(
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
-                colors: [Colors.indigo.shade100, Colors.white,Colors.white,Colors.indigo.shade100])),
+                colors: [
+              Colors.indigo.shade100,
+              Colors.white,
+              Colors.white,
+              Colors.indigo.shade100
+            ])),
         child: Column(
           children: [
             Row(
@@ -43,12 +48,37 @@ class Secondpage extends StatelessWidget {
               ],
             ),
             SizedBox(
-              height: 50,
+              height: 30,
             ),
             Padding(
-              padding: const EdgeInsets.only(right: 170),
+              padding: const EdgeInsets.only(right: 210),
               child: Text(
-                "Enter the invoice number",
+                "Select invoice Date",
+                style: TextStyle(color: Colors.indigo),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 30, right: 30, top: 20),
+              child: TextField(
+                decoration: InputDecoration(
+                    filled: true,
+                    fillColor: Colors.blueGrey.shade50,
+                    hintText: "    Eg:1232544",
+                    enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(10),
+                        borderSide: BorderSide(
+                          width: 1,
+                          color: Colors.white,
+                        ))),
+              ),
+            ),
+            SizedBox(
+              height: 9,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(right: 215, top: 3),
+              child: Text(
+                "Enter the amount",
                 style: TextStyle(color: Colors.indigo),
               ),
             ),
@@ -71,7 +101,7 @@ class Secondpage extends StatelessWidget {
                 image: AssetImage(
                     "assets/images/bsckground-removebg-preview.png")),
             SizedBox(
-              height: 50,
+              height: 2,
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -91,8 +121,9 @@ class Secondpage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  style:
-                  ElevatedButton.styleFrom(backgroundColor: Colors.white,minimumSize: Size(150, 40)),
+                  style: ElevatedButton.styleFrom(
+                      backgroundColor: Colors.white,
+                      minimumSize: Size(150, 40)),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(8.0),
@@ -111,9 +142,9 @@ class Secondpage extends StatelessWidget {
                         )
                       ],
                     ),
-                    style:
-                    ElevatedButton.styleFrom(
-                        minimumSize: Size(150, 40),backgroundColor: Colors.white ),
+                    style: ElevatedButton.styleFrom(
+                        minimumSize: Size(150, 40),
+                        backgroundColor: Colors.white),
                   ),
                 ),
               ],

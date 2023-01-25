@@ -2,21 +2,23 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'Grid_cardss.dart';
 
-void main() {
-  runApp(MaterialApp(
-    home: HomeScreeen_ui(),
-    debugShowCheckedModeBanner: false,
-    theme: ThemeData(appBarTheme: const AppBarTheme(color: Colors.white)),
-  ));
-}
+// void main() {
+//   runApp(MaterialApp(
+//     home: HomeScreeen_ui(),
+//     debugShowCheckedModeBanner: false,
+//     theme: ThemeData(appBarTheme: const AppBarTheme(color: Colors.white)),
+//   ));
+// }
 
 class HomeScreeen_ui extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
+            backgroundColor: Colors.white,
             pinned: true,
             floating: true,
             leading: IconButton(
