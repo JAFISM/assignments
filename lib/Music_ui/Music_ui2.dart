@@ -129,7 +129,7 @@ class PlayList extends StatelessWidget {
               options: CarouselOptions(
                 height: 200,
                 autoPlay: true,
-                viewportFraction: .5,
+                viewportFraction: .56,
                 //enlargeCenterPage: true,
                 aspectRatio: 16 / 9,
                 //  autoPlayCurve: Curves.fastOutSlowIn,
