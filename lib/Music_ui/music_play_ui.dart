@@ -118,13 +118,13 @@ class MusicPlay_list extends StatelessWidget {
             ),
           ),
           SliverPadding(
-            padding: EdgeInsets.all(20),
+            padding: EdgeInsets.only(top: 30),
             sliver: SliverList(
               delegate: SliverChildListDelegate(
                 [
-                  const SizedBox(
-                    height: 15,
-                  ),
+                  // const SizedBox(
+                  //   height: 15,
+                  // ),
                   GridView.builder(
                     physics: const NeverScrollableScrollPhysics(),
                     shrinkWrap: true,
