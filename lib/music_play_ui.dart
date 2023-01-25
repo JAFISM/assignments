@@ -81,55 +81,58 @@ class MusicPlay_list extends StatelessWidget {
       ),
       body: CustomScrollView(
         slivers: [
-          SliverAppBar(
-            backgroundColor: Colors.black,
-            title: Center(
-                child: Text(
-              "Playlists",
-              style: TextStyle(
-                  color: Colors.pink.shade200,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 30),
-            )),
-            floating: false,
-            pinned: true,
-            bottom: AppBar(
+          SliverPadding(
+            padding: EdgeInsets.all(8),
+            sliver: SliverAppBar(
               backgroundColor: Colors.black,
-              elevation: 0,
-              title: const Center(
-                child: TextField(
-                  decoration: InputDecoration(
-                      filled: true,
-                      fillColor: Color.fromARGB(200, 10, 18, 10),
-                      hintText: "search....",
-                      suffixIcon: Icon(
-                        Icons.search_outlined,
-                        color: Colors.pink,
-                      ),
-                      hintStyle: TextStyle(color: Colors.pink),
-                      border: OutlineInputBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(50)))),
+              title: Center(
+                  child: Text(
+                "Playlists",
+                style: TextStyle(
+                    color: Colors.pink.shade200,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 30),
+              )),
+              floating: false,
+              pinned: true,
+              bottom: AppBar(
+                backgroundColor: Colors.black,
+                elevation: 0,
+                title: const Center(
+                  child: TextField(
+                    decoration: InputDecoration(
+                        filled: true,
+                        fillColor: Color.fromARGB(200, 10, 18, 10),
+                        hintText: "search....",
+                        suffixIcon: Icon(
+                          Icons.search_outlined,
+                          color: Colors.pink,
+                        ),
+                        hintStyle: TextStyle(color: Colors.pink),
+                        border: OutlineInputBorder(
+                            borderRadius:
+                                BorderRadius.all(Radius.circular(50)))),
+                  ),
                 ),
               ),
             ),
           ),
-          Expanded(
-            flex: 1,
-            child: SliverList(
+          SliverPadding(
+            padding: EdgeInsets.all(20),
+            sliver: SliverList(
               delegate: SliverChildListDelegate(
                 [
                   const SizedBox(
-                    height: 20,
+                    height: 15,
                   ),
                   GridView.builder(
                     physics: const NeverScrollableScrollPhysics(),
                     shrinkWrap: true,
-                    gridDelegate:
-                        const SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisCount: 2,
-                            childAspectRatio: 1,
-                            crossAxisSpacing: 20,
-                            mainAxisSpacing: 20),
+                    gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                        crossAxisCount: 2,
+                        childAspectRatio: 1,
+                        crossAxisSpacing: 20,
+                        mainAxisSpacing: 20),
                     itemBuilder: (context, index) {
                       return Padding(
                         padding: const EdgeInsets.all(10),
