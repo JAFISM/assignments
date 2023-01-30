@@ -68,6 +68,8 @@ class Firstpage extends StatelessWidget {
               ),
             ),
             Image(
+              height: 300,
+                width: 300,
                 image: AssetImage(
                     "assets/images/bsckground-removebg-preview.png")),
             SizedBox(

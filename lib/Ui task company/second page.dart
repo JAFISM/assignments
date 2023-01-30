@@ -20,9 +20,8 @@ class Secondpage extends StatelessWidget {
                 end: Alignment.bottomRight,
                 colors: [
               Colors.indigo.shade100,
-              Colors.white,
-              Colors.white,
-              Colors.indigo.shade100
+              Colors.indigo.shade50,
+              Colors.indigo.shade100,
             ])),
         child: Column(
           children: [
@@ -62,8 +61,9 @@ class Secondpage extends StatelessWidget {
               child: TextField(
                 decoration: InputDecoration(
                     filled: true,
-                    fillColor: Colors.blueGrey.shade50,
-                    hintText: "    Eg:1232544",
+                    fillColor:Color.fromARGB(255,238,244,241),
+                    hintText: "    December 12 2023",
+                    suffixIcon: Icon(Icons.calendar_month,),
                     enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
                         borderSide: BorderSide(
@@ -87,8 +87,8 @@ class Secondpage extends StatelessWidget {
               child: TextField(
                 decoration: InputDecoration(
                     filled: true,
-                    fillColor: Colors.blueGrey.shade50,
-                    hintText: "    Eg:1232544",
+                    fillColor: Color.fromARGB(255,238,244,241),
+                    hintText: "   Eg: 2500",
                     enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(10),
                         borderSide: BorderSide(
@@ -97,9 +97,13 @@ class Secondpage extends StatelessWidget {
                         ))),
               ),
             ),
-            Image(
-                image: AssetImage(
-                    "assets/images/bsckground-removebg-preview.png")),
+            Container(
+              height: MediaQuery.of(context).size.height / 2,
+              width: 300,
+              child: Image(
+                  image: AssetImage(
+                      "assets/images/bsckground-removebg-preview.png")),
+            ),
             SizedBox(
               height: 2,
             ),
