@@ -69,7 +69,7 @@ class Hotel_packages extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(
+                const Text(
                   "Hotel Packages",
                   style: TextStyle(
                       fontWeight: FontWeight.bold,
@@ -86,7 +86,7 @@ class Hotel_packages extends StatelessWidget {
             ),
             Expanded(
               child: ListView.builder(
-                physics: NeverScrollableScrollPhysics(),
+                physics: const NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
                 scrollDirection: Axis.vertical,
                 itemCount: 10,
@@ -111,7 +111,7 @@ class Hotel_packages extends StatelessWidget {
                           flex: 2,
                           child: Container(
                             decoration: BoxDecoration(
-                                borderRadius: BorderRadius.only(
+                                borderRadius: const BorderRadius.only(
                                   topLeft: Radius.circular(10),
                                   bottomLeft: Radius.circular(10),
                                 ),
@@ -129,14 +129,14 @@ class Hotel_packages extends StatelessWidget {
                               children: [
                                 Text(
                                   hotelname[index],
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       fontWeight: FontWeight.bold,
                                       color: Colors.black,
                                       fontSize: 15),
                                 ),
                                 Text(
                                   description[index],
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       fontSize: 10, color: Colors.grey),
                                 ),
                                 Row(
@@ -145,18 +145,19 @@ class Hotel_packages extends StatelessWidget {
                                   children: [
                                     Text(
                                       rate[index],
-                                      style: TextStyle(color: Colors.blue),
+                                      style:
+                                          const TextStyle(color: Colors.blue),
                                     ),
                                     Padding(
                                       padding: const EdgeInsets.all(8.0),
                                       child: ElevatedButton(
                                           onPressed: () {},
-                                          child: Text("Book")),
+                                          child: const Text("Book")),
                                     )
                                   ],
                                 ),
                                 Row(
-                                  children: [
+                                  children: const [
                                     Icon(
                                       Icons.car_rental,
                                       color: Colors.blue,
