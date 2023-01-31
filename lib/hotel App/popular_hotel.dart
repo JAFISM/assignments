@@ -94,8 +94,8 @@ class Pop_hotel extends StatelessWidget {
             ),
             Expanded(
               child: ListView.builder(
-                // physics:NeverScrollableScrollPhysics(),
-                // shrinkWrap: true,
+                physics:NeverScrollableScrollPhysics(),
+                shrinkWrap: true,
                 scrollDirection: Axis.horizontal,
                 itemCount: 10,
                 itemBuilder: (BuildContext context, int index) => Padding(
