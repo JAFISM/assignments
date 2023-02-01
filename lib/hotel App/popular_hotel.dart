@@ -73,8 +73,9 @@ class Pop_hotel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
+    return Padding(
+      padding: const EdgeInsets.all(12.0),
+      child: Container(
         height: MediaQuery.of(context).size.height / 3,
         width: double.infinity,
         child: Column(
@@ -83,7 +84,7 @@ class Pop_hotel extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                Text(
+                const Text(
                   'Popular Hotel',
                   style: TextStyle(
                       fontSize: 20,
@@ -94,8 +95,8 @@ class Pop_hotel extends StatelessWidget {
             ),
             Expanded(
               child: ListView.builder(
-                physics:NeverScrollableScrollPhysics(),
-                shrinkWrap: true,
+                // physics:NeverScrollableScrollPhysics(),
+                // shrinkWrap: true,
                 scrollDirection: Axis.horizontal,
                 itemCount: 10,
                 itemBuilder: (BuildContext context, int index) => Padding(
@@ -119,7 +120,7 @@ class Pop_hotel extends StatelessWidget {
                           flex: 3,
                           child: Container(
                             decoration: BoxDecoration(
-                                borderRadius: BorderRadius.only(
+                                borderRadius: const BorderRadius.only(
                                   topLeft: Radius.circular(10),
                                   topRight: Radius.circular(10),
                                 ),
@@ -134,14 +135,14 @@ class Pop_hotel extends StatelessWidget {
                               children: [
                                 Text(
                                   hotelname[index],
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       fontWeight: FontWeight.bold,
                                       color: Colors.black,
                                       fontSize: 15),
                                 ),
                                 Text(
                                   description[index],
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       fontSize: 10, color: Colors.grey),
                                 )
                               ],
@@ -153,15 +154,15 @@ class Pop_hotel extends StatelessWidget {
                               children: [
                                 Text(
                                   rate[index],
-                                  style: TextStyle(color: Colors.blue),
+                                  style: const TextStyle(color: Colors.blue),
                                 ),
                                 Row(
                                   children: [
                                     Text(
                                       rating[index],
-                                      style: TextStyle(color: Colors.blue),
+                                      style: const TextStyle(color: Colors.blue),
                                     ),
-                                    Icon(
+                                    const Icon(
                                       CupertinoIcons.star_fill,
                                       color: Colors.blue,
                                       size: 16,

@@ -60,9 +60,10 @@ class Hotel_packages extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        height: MediaQuery.of(context).size.height / 1,
+    return Padding(
+      padding: const EdgeInsets.all(10.0),
+      child: Container(
+        height: MediaQuery.of(context).size.height /2,
         width: double.infinity,
         child: Column(
           children: [
@@ -86,8 +87,8 @@ class Hotel_packages extends StatelessWidget {
             ),
             Expanded(
               child: ListView.builder(
-                physics: const NeverScrollableScrollPhysics(),
-                shrinkWrap: true,
+                // physics: const NeverScrollableScrollPhysics(),
+                // shrinkWrap: true,
                 scrollDirection: Axis.vertical,
                 itemCount: 10,
                 itemBuilder: (BuildContext context, int index) => Padding(
