@@ -144,7 +144,7 @@ class Pop_hotel extends StatelessWidget {
                                   description[index],
                                   style: const TextStyle(
                                       fontSize: 10, color: Colors.grey),
-                                )
+                                ),
                               ],
                             )),
                         Expanded(
