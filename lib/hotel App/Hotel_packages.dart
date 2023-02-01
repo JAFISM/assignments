@@ -81,7 +81,7 @@ class Hotel_packages extends StatelessWidget {
                     onPressed: () {},
                     child: Text(
                       "View More",
-                      style: TextStyle(color: Colors.grey.shade600),
+                      style: TextStyle(color: Colors.blue),
                     )),
               ],
             ),

@@ -46,12 +46,12 @@ class Home_page extends StatelessWidget {
                           color: Colors.grey.shade600,
                           spreadRadius: 1,
                           blurRadius: 2,
-                          offset: const Offset(0, 0),
+                          offset: const Offset(0, 2),
                         ),
-                        BoxShadow(
-                          color: Colors.grey.shade300,
-                          offset: const Offset(0, 0),
-                        )
+                        // BoxShadow(
+                        //   color: Colors.grey.shade300,
+                        //   offset: const Offset(0, 0),
+                        // )
                       ],
                       border: Border.all(color: Colors.grey.shade300),
                       // boxShadow: [BoxShadow(blurRadius: 15, offset: Offset(5, 5))],

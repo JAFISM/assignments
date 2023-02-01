@@ -148,29 +148,30 @@ class Pop_hotel extends StatelessWidget {
                               ],
                             )),
                         Expanded(
-                            flex: 1,
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                Text(
-                                  rate[index],
-                                  style: const TextStyle(color: Colors.blue),
-                                ),
-                                Row(
-                                  children: [
-                                    Text(
-                                      rating[index],
-                                      style: const TextStyle(color: Colors.blue),
-                                    ),
-                                    const Icon(
-                                      CupertinoIcons.star_fill,
-                                      color: Colors.blue,
-                                      size: 16,
-                                    )
-                                  ],
-                                )
-                              ],
-                            ))
+                          flex: 1,
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                rate[index],
+                                style: const TextStyle(color: Colors.blue),
+                              ),
+                              Row(
+                                children: [
+                                  Text(
+                                    rating[index],
+                                    style: const TextStyle(color: Colors.blue),
+                                  ),
+                                  const Icon(
+                                    CupertinoIcons.star_fill,
+                                    color: Colors.blue,
+                                    size: 16,
+                                  )
+                                ],
+                              )
+                            ],
+                          ),
+                        ),
                       ],
                     ),
                   ),
