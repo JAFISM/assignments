@@ -74,7 +74,7 @@ class Pop_hotel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(12.0),
+      padding: const EdgeInsets.all(10.0),
       child: Container(
         height: MediaQuery.of(context).size.height / 3,
         width: double.infinity,
@@ -103,7 +103,7 @@ class Pop_hotel extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: Container(
                     height: MediaQuery.of(context).size.height / 6,
-                    width: MediaQuery.of(context).size.width * .3,
+                    width: MediaQuery.of(context).size.width * .4,
                     decoration: BoxDecoration(
                         color: Colors.white,
                         boxShadow: [
@@ -117,7 +117,7 @@ class Pop_hotel extends StatelessWidget {
                     child: Column(
                       children: [
                         Expanded(
-                          flex: 3,
+                          flex: 6,
                           child: Container(
                             decoration: BoxDecoration(
                                 borderRadius: const BorderRadius.only(
@@ -148,7 +148,7 @@ class Pop_hotel extends StatelessWidget {
                               ],
                             )),
                         Expanded(
-                          flex: 1,
+                          flex: 3,
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: [
