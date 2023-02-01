@@ -83,8 +83,8 @@ class Pop_hotel extends StatelessWidget {
           children: <Widget>[
             Row(
               mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                const Text(
+              children: const [
+                Text(
                   'Popular Hotel',
                   style: TextStyle(
                       fontSize: 20,
@@ -108,8 +108,8 @@ class Pop_hotel extends StatelessWidget {
                         color: Colors.white,
                         boxShadow: [
                           BoxShadow(
-                            color: Colors.grey.shade600,
-                            spreadRadius: 1,
+                            color: Colors.grey.shade400,
+                            spreadRadius: 2,
                             blurRadius: 3,
                           ),
                         ],
@@ -164,7 +164,7 @@ class Pop_hotel extends StatelessWidget {
                                   ),
                                   const Icon(
                                     CupertinoIcons.star_fill,
-                                    color: Colors.blue,
+                                    color: Colors.amber,
                                     size: 16,
                                   )
                                 ],

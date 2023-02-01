@@ -100,7 +100,7 @@ class Hotel_packages extends StatelessWidget {
                         color: Colors.white,
                         boxShadow: [
                           BoxShadow(
-                            color: Colors.grey.shade600,
+                            color: Colors.grey.shade400,
                             spreadRadius: 1,
                             blurRadius: 3,
                           ),
