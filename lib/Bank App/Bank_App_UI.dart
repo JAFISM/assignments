@@ -13,6 +13,7 @@ class Bank_main extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        elevation: 0,
         title: const Center(child: Text("Welcome Jafis M")),
         leading: const Icon(Icons.list),
         actions: const [
@@ -27,15 +28,25 @@ class Bank_main extends StatelessWidget {
           Column(
             children: [
               Container(
-                height: MediaQuery.of(context).size.height / 8,
+                height: MediaQuery
+                    .of(context)
+                    .size
+                    .height / 8,
                 width: double.infinity,
-                decoration: BoxDecoration(color: Colors.indigoAccent.shade100),
+                decoration:
+                BoxDecoration(color: Colors.indigoAccent.shade100),
               ),
               Center(
                 heightFactor: 0.01,
                 child: Container(
-                  height: MediaQuery.of(context).size.height / 5,
-                  width: MediaQuery.of(context).size.width / 1.12,
+                  height: MediaQuery
+                      .of(context)
+                      .size
+                      .height / 5,
+                  width: MediaQuery
+                      .of(context)
+                      .size
+                      .width / 1.12,
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(8),
