@@ -94,7 +94,7 @@ class Hotel_packages extends StatelessWidget {
                 itemBuilder: (BuildContext context, int index) => Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Container(
-                    height: MediaQuery.of(context).size.height / 6,
+                    height: MediaQuery.of(context).size.height /5,
                     width: MediaQuery.of(context).size.width / 4,
                     decoration: BoxDecoration(
                         color: Colors.white,
@@ -122,7 +122,7 @@ class Hotel_packages extends StatelessWidget {
                           ),
                         ),
                         Expanded(
-                          flex: 4,
+                          flex: 6,
                           child: Padding(
                             padding: const EdgeInsets.all(8.0),
                             child: Column(
