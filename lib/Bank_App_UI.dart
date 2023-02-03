@@ -47,51 +47,45 @@ class Bank_main extends StatelessWidget {
                       ),
                     ],
                   ),
-                  child: Expanded(
-                    flex: 4,
-                    child: Row(
-                      children: [
-                        const Padding(
-                          padding: EdgeInsets.all(8.0),
+                  child: Row(
+                    children: [
+                      const Padding(
+                        padding: EdgeInsets.all(8.0),
+                        child: CircleAvatar(
+                          radius: 43,
                           child: CircleAvatar(
-                            radius: 43,
-                            child: CircleAvatar(
-                              radius: 40,
-                              backgroundImage: NetworkImage(
-                                  "https://images.news18.com/ibnlive/uploads/2022/07/5b64ef07d608085cf4b239ddfeda4a8d.png"),
-                            ),
+                            radius: 40,
+                            backgroundImage: NetworkImage(
+                                "https://images.news18.com/ibnlive/uploads/2022/07/5b64ef07d608085cf4b239ddfeda4a8d.png"),
                           ),
                         ),
-                        Expanded(
-                          flex: 2,
-                          child: Align(
-                            alignment: Alignment.center,
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: const [
-                                Text(
-                                  "State Bank Of India",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.black,
-                                      fontSize: 20),
-                                ),
-                                Text(
-                                  "NPR.132664997978",
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.indigo),
-                                ),
-                                Text(
-                                  "32616444448884488",
-                                  style: TextStyle(color: Colors.black),
-                                ),
-                              ],
+                      ),
+                      Align(
+                        alignment: Alignment.center,
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: const [
+                            Text(
+                              "State Bank Of India",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.black,
+                                  fontSize: 20),
                             ),
-                          ),
-                        )
-                      ],
-                    ),
+                            Text(
+                              "NPR.132664997978",
+                              style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  color: Colors.indigo),
+                            ),
+                            Text(
+                              "32616444448884488",
+                              style: TextStyle(color: Colors.black),
+                            ),
+                          ],
+                        ),
+                      )
+                    ],
                   ),
                 ),
               ),
