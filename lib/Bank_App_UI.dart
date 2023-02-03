@@ -64,24 +64,44 @@ class Bank_main extends StatelessWidget {
                         alignment: Alignment.center,
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
-                          children: const [
-                            Text(
+                          children: [
+                            const Text(
                               "State Bank Of India",
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   color: Colors.black,
                                   fontSize: 20),
                             ),
-                            Text(
+                            const Text(
                               "NPR.132664997978",
                               style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   color: Colors.indigo),
                             ),
-                            Text(
+                            const Text(
                               "32616444448884488",
                               style: TextStyle(color: Colors.black),
                             ),
+                            Wrap(
+                              spacing: 25,
+                              children: const [
+                                Icon(
+                                  Icons.qr_code_2_sharp,
+                                  color: Colors.indigo,
+                                  size: 20,
+                                ),
+                                Icon(
+                                  Icons.mobile_friendly,
+                                  color: Colors.indigo,
+                                  size: 20,
+                                ),
+                                Icon(
+                                  Icons.sell,
+                                  color: Colors.indigo,
+                                  size: 20,
+                                )
+                              ],
+                            )
                           ],
                         ),
                       )
