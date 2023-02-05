@@ -25,13 +25,16 @@ class Trans_grid extends StatelessWidget {
     'Deposit',
     'History'
   ];
-  var datess = ["10-06-2023", "10-06-2023"];
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: CustomScrollView(slivers: [
-        SliverToBoxAdapter(
+    return CustomScrollView(
+      physics: NeverScrollableScrollPhysics(),
+      shrinkWrap: true,
+        slivers: [
+      SliverToBoxAdapter(
+        child: Center(
+          heightFactor: 1.3,
           child: Column(
             children: [
               Row(
@@ -48,7 +51,7 @@ class Trans_grid extends StatelessWidget {
                 shrinkWrap: true,
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                     crossAxisCount: 3,
-                    childAspectRatio: 1,
+                    childAspectRatio: 1.1,
                     crossAxisSpacing: 10,
                     mainAxisSpacing: 10),
                 itemBuilder: (context, index) {
@@ -68,7 +71,7 @@ class Trans_grid extends StatelessWidget {
                             Image(image: AssetImage(iconss[index])),
                             Text(
                               gridnamess[index],
-                              style: TextStyle(color: Colors.indigo),
+                              style: const TextStyle(color: Colors.indigo),
                             )
                           ],
                         ),
@@ -91,7 +94,7 @@ class Trans_grid extends StatelessWidget {
                 ),
               ),
               ListView(
-                physics: NeverScrollableScrollPhysics(),
+                physics: const NeverScrollableScrollPhysics(),
                 shrinkWrap: true,
                 children: [
                   Padding(
@@ -101,7 +104,7 @@ class Trans_grid extends StatelessWidget {
                       width: MediaQuery.of(context).size.width / 4,
                       decoration: BoxDecoration(
                           color: Colors.white,
-                          boxShadow: [
+                          boxShadow: const [
                             BoxShadow(
                               color: Colors.indigoAccent,
                               spreadRadius: 1,
@@ -114,9 +117,9 @@ class Trans_grid extends StatelessWidget {
                           Expanded(
                             flex:1,
                             child: Container(
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                 color: Colors.indigo,
-                                  borderRadius: const BorderRadius.only(
+                                  borderRadius: BorderRadius.only(
                                     topLeft: Radius.circular(10),
                                     bottomLeft: Radius.circular(10),
                                   ),
@@ -130,29 +133,29 @@ class Trans_grid extends StatelessWidget {
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text(
+                                  const Text(
                                     "CWDR/",
-                                    style: const TextStyle(
+                                    style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                         color: Colors.indigo,
                                         fontSize: 15),
                                   ),
-                                  Text(
+                                  const Text(
                                     "9857/9856/9855/98659",
-                                    style: const TextStyle(
+                                    style: TextStyle(
                                         fontSize: 14, color: Colors.indigo,fontWeight: FontWeight.bold),
                                   ),
                                   Row(
                                     mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
-                                    children: [
+                                    children: const [
                                       Text(
                                         "10-06-2023",
                                         style:
-                                        const TextStyle(color: Colors.indigoAccent),
+                                        TextStyle(color: Colors.indigoAccent),
                                       ),
                                       Padding(
-                                        padding: const EdgeInsets.all(8.0),
+                                        padding: EdgeInsets.all(8.0),
                                         child: Text(
                                           "NPR 2325555514",style: TextStyle(color: Colors.indigo),
                                         )
@@ -174,7 +177,7 @@ class Trans_grid extends StatelessWidget {
                       width: MediaQuery.of(context).size.width / 4,
                       decoration: BoxDecoration(
                           color: Colors.white,
-                          boxShadow: [
+                          boxShadow: const [
                             BoxShadow(
                               color: Colors.indigoAccent,
                               spreadRadius: 1,
@@ -187,9 +190,9 @@ class Trans_grid extends StatelessWidget {
                           Expanded(
                             flex:1,
                             child: Container(
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                 color: Colors.indigo,
-                                borderRadius: const BorderRadius.only(
+                                borderRadius: BorderRadius.only(
                                   topLeft: Radius.circular(10),
                                   bottomLeft: Radius.circular(10),
                                 ),
@@ -203,29 +206,29 @@ class Trans_grid extends StatelessWidget {
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text(
+                                  const Text(
                                     "CWDR/",
-                                    style: const TextStyle(
+                                    style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                         color: Colors.indigo,
                                         fontSize: 15),
                                   ),
-                                  Text(
+                                  const Text(
                                     "9857/9856/9855/98632",
-                                    style: const TextStyle(
+                                    style: TextStyle(
                                         fontSize: 14, color: Colors.indigo,fontWeight: FontWeight.bold),
                                   ),
                                   Row(
                                     mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
-                                    children: [
+                                    children: const [
                                       Text(
                                         "10-08-2023",
                                         style:
-                                        const TextStyle(color: Colors.indigoAccent),
+                                        TextStyle(color: Colors.indigoAccent),
                                       ),
                                       Padding(
-                                          padding: const EdgeInsets.all(8.0),
+                                          padding: EdgeInsets.all(8.0),
                                           child: Text(
                                             "NPR 2323455514",style: TextStyle(color: Colors.indigo),
                                           )
@@ -247,7 +250,7 @@ class Trans_grid extends StatelessWidget {
                       width: MediaQuery.of(context).size.width / 4,
                       decoration: BoxDecoration(
                           color: Colors.white,
-                          boxShadow: [
+                          boxShadow: const [
                             BoxShadow(
                               color: Colors.indigoAccent,
                               spreadRadius: 1,
@@ -260,9 +263,9 @@ class Trans_grid extends StatelessWidget {
                           Expanded(
                             flex:1,
                             child: Container(
-                              decoration: BoxDecoration(
+                              decoration: const BoxDecoration(
                                 color: Colors.indigo,
-                                borderRadius: const BorderRadius.only(
+                                borderRadius: BorderRadius.only(
                                   topLeft: Radius.circular(10),
                                   bottomLeft: Radius.circular(10),
                                 ),
@@ -276,29 +279,29 @@ class Trans_grid extends StatelessWidget {
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text(
+                                  const Text(
                                     "CWDR/",
-                                    style: const TextStyle(
+                                    style: TextStyle(
                                         fontWeight: FontWeight.bold,
                                         color: Colors.indigo,
                                         fontSize: 15),
                                   ),
-                                  Text(
+                                  const Text(
                                     "9857/9856/9855/98659",
-                                    style: const TextStyle(
+                                    style: TextStyle(
                                         fontSize: 14, color: Colors.indigo,fontWeight: FontWeight.bold),
                                   ),
                                   Row(
                                     mainAxisAlignment:
                                     MainAxisAlignment.spaceBetween,
-                                    children: [
+                                    children: const [
                                       Text(
                                         "10-06-2023",
                                         style:
-                                        const TextStyle(color: Colors.blue),
+                                        TextStyle(color: Colors.blue),
                                       ),
                                       Padding(
-                                          padding: const EdgeInsets.all(8.0),
+                                          padding: EdgeInsets.all(8.0),
                                           child: Text(
                                             "NPR 2325555514",style: TextStyle(color: Colors.indigo),
                                           )
@@ -318,7 +321,7 @@ class Trans_grid extends StatelessWidget {
             ],
           ),
         ),
-      ]),
-    );
+      ),
+    ]);
   }
 }
