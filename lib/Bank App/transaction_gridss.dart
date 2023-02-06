@@ -46,18 +46,18 @@ class Trans_grid extends StatelessWidget {
                   )
                 ],
               ),
-              GridView.builder(
-                physics: const NeverScrollableScrollPhysics(),
-                shrinkWrap: true,
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                    crossAxisCount: 3,
-                    childAspectRatio: 1.1,
-                    crossAxisSpacing: 10,
-                    mainAxisSpacing: 10),
-                itemBuilder: (context, index) {
-                  return Padding(
-                    padding: const EdgeInsets.all(10),
-                    child: Card(
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: GridView.builder(
+                  physics: const NeverScrollableScrollPhysics(),
+                  shrinkWrap: true,
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 3,
+                      childAspectRatio: 1.1,
+                      crossAxisSpacing: 5,
+                      mainAxisSpacing: 5),
+                  itemBuilder: (context, index) {
+                    return Card(
                       shadowColor: Colors.indigoAccent,
                       elevation: 5,
                       shape: RoundedRectangleBorder(
@@ -67,6 +67,7 @@ class Trans_grid extends StatelessWidget {
                         // height: 400,
                         // width: 200,
                         child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             Image(image: AssetImage(iconss[index])),
                             Text(
@@ -76,10 +77,10 @@ class Trans_grid extends StatelessWidget {
                           ],
                         ),
                       ),
-                    ),
-                  );
-                },
-                itemCount: iconss.length,
+                    );
+                  },
+                  itemCount: iconss.length,
+                ),
               ),
               Padding(
                 padding: const EdgeInsets.all(8.0),
@@ -257,7 +258,8 @@ class Trans_grid extends StatelessWidget {
                               blurRadius: 3,
                             ),
                           ],
-                          borderRadius: BorderRadius.circular(10)),
+                          borderRadius: BorderRadius.circular(10)
+                      ),
                       child: Row(
                         children: [
                           Expanded(
