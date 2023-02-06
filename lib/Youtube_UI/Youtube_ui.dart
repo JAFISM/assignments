@@ -25,8 +25,8 @@ class Youtube_main extends StatelessWidget {
         slivers: [
           SliverAppBar(
             elevation: 0,
-            floating: true,
-            pinned: true,
+            floating:true,
+            pinned: false,
             title: const Text(
               "YouTube",
               style:
