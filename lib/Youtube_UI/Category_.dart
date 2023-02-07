@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main(){
@@ -35,7 +36,9 @@ class Category_ extends StatelessWidget{
            width: 80,
            child: Center(child: Text(category[index],style: TextStyle(color: Colors.white),)),
            decoration: BoxDecoration(
-               color: Color.fromARGB(200, 10, 18, 10),
+               color:
+               //Colors.black54,
+               Color.fromARGB(200, 10, 12, 10),
                boxShadow: const [
                  BoxShadow(
                    color: Colors.grey,

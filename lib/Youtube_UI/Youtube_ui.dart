@@ -15,17 +15,63 @@ void main() {
   ));
 }
 
-class Youtube_main extends StatelessWidget {
+class Youtube_main extends StatefulWidget {
+  @override
+  State<Youtube_main> createState() => _Youtube_mainState();
+}
+
+class _Youtube_mainState extends State<Youtube_main> {
+  int _selectedIndex = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFF1b1c1e),
+      bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: const Color(0xFF1b1c1e),
+        selectedItemColor: Colors.white,
+        unselectedItemColor: Colors.white,
+        currentIndex: _selectedIndex,
+        type: BottomNavigationBarType.fixed,
+        onTap: (index) => setState(() => _selectedIndex = index),
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.home_outlined,
+            ),
+            activeIcon: Icon(Icons.home),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.ondemand_video_sharp),
+            label: 'Shorts',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(
+              Icons.add_circle_outlined,
+              size: 30,
+            ),
+            activeIcon: Icon(Icons.add_circle),
+            label: '',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.subscriptions),
+            activeIcon: Icon(Icons.subscriptions_outlined),
+            label: 'Subscriptions',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.video_library_outlined),
+            activeIcon: Icon(Icons.video_library),
+            label: 'Library',
+          ),
+        ],
+      ),
+      backgroundColor: const Color(0xFF1b1c1e),
       body: CustomScrollView(
         physics: const BouncingScrollPhysics(),
         slivers: [
           SliverAppBar(
             elevation: 0,
-            floating:true,
+            floating: true,
             pinned: false,
             title: const Text(
               "YouTube",
@@ -36,28 +82,26 @@ class Youtube_main extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(10.0),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   //spacing: 10,
                   children: const [
                     Padding(
-                      padding: const EdgeInsets.all(10.0),
+                      padding: EdgeInsets.all(8.0),
                       child: Icon(Icons.cast),
                     ),
                     Padding(
-                      padding: const EdgeInsets.all(10.0),
+                      padding: EdgeInsets.all(8.0),
                       child: Icon(Icons.notifications_none_rounded),
                     ),
                     Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: Icon(Icons.search)
+                      padding: EdgeInsets.all(8.0),
+                      child: Icon(Icons.search),
                     ),
-                    Center(
-                      child: CircleAvatar(
-                        radius: 15,
-                        backgroundColor: Colors.black12,
-                        backgroundImage: NetworkImage(
-                            "https://images.news18.com/ibnlive/uploads/2022/07/5b64ef07d608085cf4b239ddfeda4a8d.png"),
-                      ),
+                    CircleAvatar(
+                      radius: 15,
+                      backgroundColor: Colors.black12,
+                      backgroundImage: NetworkImage(
+                          "https://images.news18.com/ibnlive/uploads/2022/07/5b64ef07d608085cf4b239ddfeda4a8d.png"),
                     )
                   ],
                 ),
@@ -65,17 +109,18 @@ class Youtube_main extends StatelessWidget {
             ],
             leading: Image.asset("assets/images/YoutubeImage.png"),
           ),
-         SliverList(delegate: SliverChildListDelegate([
-           Column(
-             children: [
-               Padding(
-                 padding: const EdgeInsets.all(8.0),
-                 child: Category_(),
-               ),
-               Video_list_ui(),
-             ],
-           ),
-         ]))
+          SliverList(
+              delegate: SliverChildListDelegate([
+            Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Category_(),
+                ),
+                Center(heightFactor: 1, child: Video_list_ui()),
+              ],
+            ),
+          ]))
         ],
       ),
     );
