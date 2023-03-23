@@ -193,7 +193,7 @@ class _HomeAutomationState extends State<HomeAutomation> {
               foregroundBuilder: (context, state, child) => child!,
               backgroundChild: const Center(
                 child: Text(
-                  'Tap to speak',
+                  'Tap to Control',
                   style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
