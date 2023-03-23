@@ -2,13 +2,6 @@ import 'package:action_slider/action_slider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MaterialApp(
-    home: HomeAutomation(),
-    debugShowCheckedModeBanner: false,
-  ));
-}
-
 class HomeAutomation extends StatefulWidget {
   const HomeAutomation({Key? key}) : super(key: key);
 
@@ -74,7 +67,7 @@ class _HomeAutomationState extends State<HomeAutomation> {
             physics: const NeverScrollableScrollPhysics(),
             shrinkWrap: true,
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 50),
-            itemCount: 4,
+            itemCount: text.length,
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2, mainAxisSpacing: 10, crossAxisSpacing: 10),
             itemBuilder: (context, int index) {

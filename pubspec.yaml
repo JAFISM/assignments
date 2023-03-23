@@ -49,6 +49,7 @@ dependencies:
   multi_screen_layout: ^3.1.0
   slider_button: ^2.0.0
   action_slider: ^0.6.1
+  responsive_framework: ^0.2.0
 
 
 
