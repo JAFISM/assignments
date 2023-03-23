@@ -147,31 +147,31 @@ class Pop_hotel extends StatelessWidget {
                                 ),
                               ],
                             )),
-                        Expanded(
-                          flex: 3,
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(
-                                rate[index],
-                                style: const TextStyle(color: Colors.blue),
-                              ),
-                              Row(
-                                children: [
-                                  Text(
-                                    rating[index],
-                                    style: const TextStyle(color: Colors.blue),
-                                  ),
-                                  const Icon(
-                                    CupertinoIcons.star_fill,
-                                    color: Colors.amber,
-                                    size: 16,
-                                  )
-                                ],
-                              )
-                            ],
-                          ),
-                        ),
+                        // Expanded(
+                        //   flex: 3,
+                        //   child: Row(
+                        //     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        //     children: [
+                        //       Text(
+                        //         rate[index],
+                        //         style: const TextStyle(color: Colors.blue),
+                        //       ),
+                        //       Row(
+                        //         children: [
+                        //           Text(
+                        //             rating[index],
+                        //             style: const TextStyle(color: Colors.blue),
+                        //           ),
+                        //           const Icon(
+                        //             CupertinoIcons.star_fill,
+                        //             color: Colors.amber,
+                        //             size: 16,
+                        //           )
+                        //         ],
+                        //       )
+                        //     ],
+                        //   ),
+                        // ),
                       ],
                     ),
                   ),

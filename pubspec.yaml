@@ -46,6 +46,9 @@ dependencies:
   google_nav_bar: ^5.0.6
   motion_tab_bar_v2: ^0.2.6
   flashy_tab_bar2: ^0.0.6
+  multi_screen_layout: ^3.1.0
+  slider_button: ^2.0.0
+  action_slider: ^0.6.1
 
 
 

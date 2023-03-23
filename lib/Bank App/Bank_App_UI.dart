@@ -1,5 +1,5 @@
 import 'package:assignments/Bank%20App/transaction_gridss.dart';
-//import 'package:flashy_tab_bar2/flashy_tab_bar2.dart';
+import 'package:flashy_tab_bar2/flashy_tab_bar2.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,49 +16,51 @@ class Bank_main extends StatefulWidget {
 }
 
 class _Bank_mainState extends State<Bank_main> {
-  // int _selectedIndex = 0;
-  //
-  // List<Widget> tabItems = [
-  //   Center(child: Text("0")),
-  //   Center(child: Text("1")),
-  //   Center(child: Text("2")),
-  //   Center(child: Text("3")),
-  //   Center(child: Text("4"))
-  // ];
-  //
-  // @override
-  // void initState() {
-  //   super.initState();
-  // }
+  int _selectedIndex = 0;
+
+  List<Widget> tabItems = [
+    Center(child: Text("0")),
+    Center(child: Text("1")),
+    Center(child: Text("2")),
+    Center(child: Text("3")),
+    Center(child: Text("4"))
+  ];
+
+  @override
+  void initState() {
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // bottomNavigationBar: FlashyTabBar(
-      //   selectedIndex: _selectedIndex,
-      //   showElevation: true,
-      //   onItemSelected: (index) => setState(() {
-      //     _selectedIndex = index;
-      //   }),
-      //   items: [
-      //     FlashyTabBarItem(
-      //       icon: Icon(Icons.home),
-      //       title: Text('Home'),
-      //     ),
-      //     FlashyTabBarItem(
-      //       icon: Icon(Icons.search),
-      //       title: Text('Explore'),
-      //     ),
-      //     FlashyTabBarItem(
-      //       icon: Icon(Icons.person),
-      //       title: Text('Profile'),
-      //     ),
-      //     FlashyTabBarItem(
-      //       icon: Icon(Icons.settings),
-      //       title: Text('Settings'),
-      //     ),
-      //   ],
-      // ),
+      bottomNavigationBar: FlashyTabBar(
+        //backgroundColor: Colors.lightBlueAccent.shade100,
+        height: 55,
+        selectedIndex: _selectedIndex,
+        showElevation: true,
+        onItemSelected: (index) => setState(() {
+          _selectedIndex = index;
+        }),
+        items: [
+          FlashyTabBarItem(
+            icon: Icon(Icons.home),
+            title: Text('Home'),
+          ),
+          FlashyTabBarItem(
+            icon: Icon(Icons.search),
+            title: Text('Explore'),
+          ),
+          FlashyTabBarItem(
+            icon: Icon(Icons.person),
+            title: Text('Profile'),
+          ),
+          FlashyTabBarItem(
+            icon: Icon(Icons.settings),
+            title: Text('Settings'),
+          ),
+        ],
+      ),
       appBar: AppBar(
         elevation: 0,
         title: const Center(child: Text("Welcome Jafis M")),

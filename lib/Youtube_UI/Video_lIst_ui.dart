@@ -22,6 +22,8 @@ class Video_list_ui extends StatelessWidget{
   ];
   var titles=[
     "Man Utd | Old Trafford",
+    "Man Utd | HighLights",
+    "Man Utd vs Man city",
     "Man Utd | Old Trafford",
     "Man Utd | Old Trafford",
     "Man Utd | Old Trafford",
@@ -30,10 +32,22 @@ class Video_list_ui extends StatelessWidget{
     "Man Utd | Old Trafford",
     "Man Utd | Old Trafford",
   ];
+  var time=[
+    "2:30",
+    "20:30",
+    "1:45",
+    "5:45",
+    "6:30",
+    "2:30",
+    "20:30",
+    "1:45",
+    "5:45",
+    "6:30",
+  ];
   @override
   Widget build(BuildContext context) {
    return ListView.builder(
-     physics: NeverScrollableScrollPhysics(),
+     physics: const NeverScrollableScrollPhysics(),
      shrinkWrap: true,
      scrollDirection: Axis.vertical,
      itemCount: 10,
@@ -63,20 +77,21 @@ class Video_list_ui extends StatelessWidget{
                        color: Colors.black,
                        borderRadius: BorderRadius.circular(3)
                      ),
-                     child: const Center(child: Text("1:35",style: TextStyle(color: Colors.white),))),
+                     child:  Center(child: Text(time[index],style: const TextStyle(color: Colors.white),))),
                )
              ],
            ),
          ),
-         const ListTile(
-           tileColor: Color(0xFF1b1c1e),
-           leading: CircleAvatar(
+          ListTile(
+           tileColor: const Color(0xFF1b1c1e),
+           leading: const CircleAvatar(
              backgroundImage: NetworkImage("https://1000logos.net/wp-content/uploads/2017/03/Color-of-the-Manchester-United-Logo.jpg"),
              radius: 15,
            ),
-           title: Text("Man UTD | Old Trafford",style: TextStyle(color: Colors.white),),
-           subtitle: Text("Manchester United  1.1 lakh views .1 day ago",style: TextStyle(color: Colors.grey),),
-           trailing:Icon(
+           title: Text(titles[index],
+             style: const TextStyle(color: Colors.white),),
+           subtitle: const Text("Manchester United  1.1 lakh views .1 day ago",style: TextStyle(color: Colors.grey),),
+           trailing:const Icon(
              Icons.more_vert_rounded,color: Colors.white,size: 15,
            )
          )
