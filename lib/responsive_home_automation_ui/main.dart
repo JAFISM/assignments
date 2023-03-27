@@ -11,6 +11,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: const HomeAutomation(),
+      theme: ThemeData(
+        appBarTheme: AppBarTheme(
+          color: Colors.transparent,
+        )
+      ),
       builder: (context, child) => ResponsiveWrapper.builder(
           BouncingScrollWrapper.builder(context, child!),
           maxWidth: 1200,
